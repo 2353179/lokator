@@ -1,0 +1,20 @@
+Aplikacija se pokrece unosom parametra:
+latPocetne,lonPocetne latKrajne,lonKrajne TIME NAZIV_JSON_FAJLA
+s razmacima izmedju podataka i bez zareza osim kod kordinata.
+PRIMER:
+45.255151,19.851358 45.240013,19.885315 05:50 myJSON.json
+
+Ideja je bila da ustvari, se uzme rastojanje izmedju pocetne i krajnje tacke i oznaci kao a, i zatim da se napravi kcadrat oko pocetne tacke tj s njom u centru
+duzine stranice 2a. Na taj nacin bi se smanjio opseg svih stanica i posmatrale samo one koje su u blizini pocetne tacke. (uzeto je 2a jer ako treba da pesaci
+vise od toga da dodje do stanice onda mu je blize da jednostavno peske dodje do krajnje tacke)
+
+Kad je smanjen opseg posmatranih stanica, onda je ideja bila da se za datu liniju prolaze kroz sve njene stanice koje se nalaze u tom kvadratu i izabere se
+stanica koja je najbliza pocetnoj i stanica koja je najbliza krajnjoj tacki.
+
+Ovaj postupak je trebalo ponavljati i na taj nacin bi nas korisnik povezivao razne rute linija i dosao do cilja. Nazalost nisam uspela da prepravim ovu verziju i stavim
+u petlju koja bi omogucavala mu da povezuje linije tako da mu pokazuje samo putanje koje mogu da se obave samo s jednom linijom a ostalo mora peske.
+
+
+
+
+
